@@ -23,9 +23,14 @@ extension ReminderListViewController {
         viewController.isAddingNewReminder = true
         viewController.setEditing(true, animated: false)
         viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .cancel, target: self, action: #selector(didCancelAdd(_:)))
+            barButtonSystemItem: .cancel,
+            target: self,
+            action: #selector(didCancelAdd(_:))
+        )
         viewController.navigationItem.title = NSLocalizedString(
-            "Add Reminder", comment: "Add Reminder view controller title")
+            "Add Reminder",
+            comment: "Add Reminder view controller title"
+        )
         let navigationController = UINavigationController(rootViewController: viewController)
         present(navigationController, animated: true)
     }

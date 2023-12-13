@@ -65,7 +65,8 @@ class ReminderViewController: UICollectionViewController {
         else {
             if isAddingNewReminder {
                 onChange(workingReminder)
-            } else {
+            }
+            else {
                 prepareForViewing()
             }
         }
