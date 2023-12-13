@@ -66,7 +66,7 @@ extension ReminderListViewController {
         var reminder = reminder(withId: id)
         reminder.isComplete.toggle()
         updateReminder(reminder)
-        updateSnapshot()
+        updateSnapshot(reloading: [id])
     }
 
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction
