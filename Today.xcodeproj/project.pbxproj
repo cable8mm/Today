@@ -25,6 +25,8 @@
 		9AD5A9CC2B29CD9700C47448 /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9CB2B29CD9700C47448 /* UIView+PinnedSubview.swift */; };
 		9AD5A9CE2B29CDFF00C47448 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9CD2B29CDFF00C47448 /* TextFieldContentView.swift */; };
 		9AD5A9D02B29CE7500C47448 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9CF2B29CE7500C47448 /* UIContentConfiguration+Stateless.swift */; };
+		9AD5A9D22B29CFFD00C47448 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9D12B29CFFD00C47448 /* TextViewContentView.swift */; };
+		9AD5A9D42B29D05500C47448 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9D32B29D05500C47448 /* DatePickerContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		9AD5A9CB2B29CD9700C47448 /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
 		9AD5A9CD2B29CDFF00C47448 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
 		9AD5A9CF2B29CE7500C47448 /* UIContentConfiguration+Stateless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
+		9AD5A9D12B29CFFD00C47448 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
+		9AD5A9D32B29D05500C47448 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				9AD5A9CB2B29CD9700C47448 /* UIView+PinnedSubview.swift */,
 				9AD5A9CD2B29CDFF00C47448 /* TextFieldContentView.swift */,
 				9AD5A9CF2B29CE7500C47448 /* UIContentConfiguration+Stateless.swift */,
+				9AD5A9D12B29CFFD00C47448 /* TextViewContentView.swift */,
+				9AD5A9D32B29D05500C47448 /* DatePickerContentView.swift */,
 			);
 			path = ContentViews;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD5A9C02B29A7A900C47448 /* ReminderListViewController+Actions.swift in Sources */,
+				9AD5A9D42B29D05500C47448 /* DatePickerContentView.swift in Sources */,
 				9A8BC8082B298C71009CE050 /* ReminderListViewController.swift in Sources */,
 				9AD5A9B92B299C1A00C47448 /* Date+Today.swift in Sources */,
 				9A8BC8042B298C71009CE050 /* AppDelegate.swift in Sources */,
@@ -216,6 +223,7 @@
 				9A8BC8062B298C71009CE050 /* SceneDelegate.swift in Sources */,
 				9AD5A9C32B29C13E00C47448 /* ReminderViewController.swift in Sources */,
 				9AD5A9CC2B29CD9700C47448 /* UIView+PinnedSubview.swift in Sources */,
+				9AD5A9D22B29CFFD00C47448 /* TextViewContentView.swift in Sources */,
 				9AD5A9C52B29C1E600C47448 /* ReminderViewController+Row.swift in Sources */,
 				9A8BC8192B2991D1009CE050 /* Reminder.swift in Sources */,
 				9AD5A9BE2B29A71D00C47448 /* ReminderDoneButton.swift in Sources */,

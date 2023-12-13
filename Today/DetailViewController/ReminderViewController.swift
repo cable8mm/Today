@@ -67,6 +67,10 @@ class ReminderViewController: UICollectionViewController {
             cell.contentConfiguration = defaultConfiguration(for: cell, at: row)
         case (.title, .editableText(let title)):
             cell.contentConfiguration = titleConfiguration(for: cell, with: title)
+        case (.date, .editableDate(let date)):
+            cell.contentConfiguration = dateConfiguration(for: cell, with: date)
+        case (.notes, .editableText(let notes)):
+            cell.contentConfiguration = notesConfiguration(for: cell, with: notes)
         default:
             fatalError("Unexpected combination of section and row.")
         }
