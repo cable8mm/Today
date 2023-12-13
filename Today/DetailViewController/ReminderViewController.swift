@@ -32,7 +32,10 @@ class ReminderViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Row) in
             return collectionView.dequeueConfiguredReusableCell(
-                using: cellRegistration, for: indexPath, item: itemIdentifier)
+                using: cellRegistration,
+                for: indexPath,
+                item: itemIdentifier
+            )
         }
 
         if #available(iOS 16, *) {
