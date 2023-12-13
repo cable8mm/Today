@@ -30,7 +30,10 @@ class ReminderListViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
             return collectionView.dequeueConfiguredReusableCell(
-                using: cellRegistration, for: indexPath, item: itemIdentifier)
+                using: cellRegistration,
+                for: indexPath,
+                item: itemIdentifier
+            )
         }
 
         var snapshot = Snapshot()
@@ -48,4 +51,3 @@ class ReminderListViewController: UICollectionViewController {
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
 }
-
