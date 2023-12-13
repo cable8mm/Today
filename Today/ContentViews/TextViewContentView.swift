@@ -11,7 +11,6 @@ class TextViewContentView: UIView, UIContentView {
     struct Configuration: UIContentConfiguration {
         var text: String? = ""
 
-
         func makeContentView() -> UIView & UIContentView {
             return TextViewContentView(self)
         }

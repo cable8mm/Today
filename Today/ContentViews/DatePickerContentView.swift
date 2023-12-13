@@ -11,7 +11,6 @@ class DatePickerContentView: UIView, UIContentView {
     struct Configuration: UIContentConfiguration {
         var date = Date.now
 
-
         func makeContentView() -> UIView & UIContentView {
             return DatePickerContentView(self)
         }
