@@ -14,6 +14,7 @@
 		9A8BC80D2B298C73009CE050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BC80C2B298C73009CE050 /* Assets.xcassets */; };
 		9A8BC8102B298C73009CE050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BC80E2B298C73009CE050 /* LaunchScreen.storyboard */; };
 		9A8BC8192B2991D1009CE050 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8BC8182B2991D1009CE050 /* Reminder.swift */; };
+		9AD5A9B92B299C1A00C47448 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9B82B299C1A00C47448 /* Date+Today.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9A8BC80F2B298C73009CE050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A8BC8112B298C73009CE050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8BC8182B2991D1009CE050 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		9AD5A9B82B299C1A00C47448 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8BC8182B2991D1009CE050 /* Reminder.swift */,
+				9AD5A9B82B299C1A00C47448 /* Date+Today.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8BC8082B298C71009CE050 /* ReminderListViewController.swift in Sources */,
+				9AD5A9B92B299C1A00C47448 /* Date+Today.swift in Sources */,
 				9A8BC8042B298C71009CE050 /* AppDelegate.swift in Sources */,
 				9A8BC8062B298C71009CE050 /* SceneDelegate.swift in Sources */,
 				9A8BC8192B2991D1009CE050 /* Reminder.swift in Sources */,
