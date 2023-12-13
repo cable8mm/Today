@@ -42,7 +42,7 @@ extension ReminderListViewController {
         doneButtonConfiguration.tintColor = .todayListCellDoneButtonTint
         cell.accessibilityCustomActions = [doneButtonAccessibilityAction(for: reminder)]
         cell.accessibilityValue =
-                    reminder.isComplete ? reminderCompletedValue : reminderNotCompletedValue
+            reminder.isComplete ? reminderCompletedValue : reminderNotCompletedValue
         cell.accessories = [
             .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always),
         ]
@@ -69,10 +69,11 @@ extension ReminderListViewController {
         updateSnapshot(reloading: [id])
     }
 
-    private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction
-    {
+    private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
         let name = NSLocalizedString(
-            "Toggle completion", comment: "Reminder done button accessibility label")
+            "Toggle completion",
+            comment: "Reminder done button accessibility label"
+        )
         let action = UIAccessibilityCustomAction(name: name) { [weak self] action in
             self?.completeReminder(withId: reminder.id)
             return true
