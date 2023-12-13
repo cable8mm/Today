@@ -32,6 +32,16 @@ extension ReminderListViewController {
         cell.backgroundConfiguration = backgroundConfiguration
     }
 
+    func reminder(withId id: Reminder.ID) -> Reminder {
+        let index = reminders.indexOfReminder(withId: id)
+        return reminders[index]
+    }
+
+    func updateReminder(_ reminder: Reminder) {
+        let index = reminders.indexOfReminder(withId: reminder.id)
+        reminders[index] = reminder
+    }
+
     private func doneButtonConfiguration(for reminder: Reminder)
         -> UICellAccessory.CustomViewConfiguration
     {
