@@ -44,7 +44,7 @@ class ReminderViewController: UICollectionViewController {
         }
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
         navigationItem.rightBarButtonItem = editButtonItem
-        
+
         updateSnapshotForViewing()
     }
 
@@ -52,7 +52,8 @@ class ReminderViewController: UICollectionViewController {
         super.setEditing(editing, animated: animated)
         if editing {
             updateSnapshotForEditing()
-        } else {
+        }
+        else {
             updateSnapshotForViewing()
         }
     }
@@ -104,7 +105,9 @@ class ReminderViewController: UICollectionViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
         snapshot.appendItems(
-            [Row.header(""), Row.title, Row.date, Row.time, Row.notes], toSection: .view)
+            [Row.header(""), Row.title, Row.date, Row.time, Row.notes],
+            toSection: .view
+        )
         dataSource.apply(snapshot)
     }
 
