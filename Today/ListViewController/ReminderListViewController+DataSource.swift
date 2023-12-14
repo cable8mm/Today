@@ -32,8 +32,13 @@ extension ReminderListViewController {
         headerView?.progress = progress
     }
 
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: String) {
-        let reminder = reminders[indexPath.item]
+    func cellRegistrationHandler(
+        cell:
+            UICollectionViewListCell,
+        indexPath: IndexPath,
+        id: Reminder.ID
+    ) {
+        let reminder = reminder(withId: id)
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
         contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
@@ -87,11 +92,13 @@ extension ReminderListViewController {
             do {
                 try await reminderStore.requestAccess()
                 reminders = try await reminderStore.readAll()
-            } catch TodayError.accessDenied, TodayError.accessRestricted {
+            }
+            catch TodayError.accessDenied, TodayError.accessRestricted {
                 #if DEBUG
-                reminders = Reminder.sampleData
+                    reminders = Reminder.sampleData
                 #endif
-            } catch {
+            }
+            catch {
                 showError(error)
             }
             updateSnapshot()

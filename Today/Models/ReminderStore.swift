@@ -14,7 +14,12 @@ final class ReminderStore {
     private let ekStore = EKEventStore()
 
     var isAvailable: Bool {
-        EKEventStore.authorizationStatus(for: .reminder) == .authorized
+        if #available(iOS 17, *) {
+            EKEventStore.authorizationStatus(for: .reminder) == .fullAccess
+        }
+        else {
+            EKEventStore.authorizationStatus(for: .reminder) == .authorized
+        }
     }
 
     func requestAccess() async throws {
@@ -25,9 +30,17 @@ final class ReminderStore {
         case .restricted:
             throw TodayError.accessRestricted
         case .notDetermined:
-            let accessGranted = try await ekStore.requestAccess(to: .reminder)
-            guard accessGranted else {
-                throw TodayError.accessDenied
+            if #available(iOS 17, *) {
+                let accessGranted = try await ekStore.requestFullAccessToReminders()
+                guard accessGranted else {
+                    throw TodayError.accessDenied
+                }
+            }
+            else {
+                let accessGranted = try await ekStore.requestAccess(to: .reminder)
+                guard accessGranted else {
+                    throw TodayError.accessDenied
+                }
             }
         case .denied:
             throw TodayError.accessDenied
@@ -46,7 +59,8 @@ final class ReminderStore {
         let reminders: [Reminder] = try ekReminders.compactMap { ekReminder in
             do {
                 return try Reminder(with: ekReminder)
-            } catch TodayError.reminderHasNoDueDate {
+            }
+            catch TodayError.reminderHasNoDueDate {
                 return nil
             }
         }

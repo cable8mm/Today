@@ -89,6 +89,10 @@ class ReminderListViewController: UICollectionViewController {
         prepareReminderStore()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshBackground()
+    }
     override func collectionView(
         _ collectionView: UICollectionView,
         shouldSelectItemAt indexPath: IndexPath
@@ -96,11 +100,6 @@ class ReminderListViewController: UICollectionViewController {
         let id = filteredReminders[indexPath.item].id
         pushDetailViewForReminder(withId: id)
         return false
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        refreshBackground()
     }
 
     override func collectionView(
@@ -137,14 +136,20 @@ class ReminderListViewController: UICollectionViewController {
     func showError(_ error: Error) {
         let alertTitle = NSLocalizedString("Error", comment: "Error alert title")
         let alert = UIAlertController(
-            title: alertTitle, message: error.localizedDescription, preferredStyle: .alert)
+            title: alertTitle,
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
         let actionTitle = NSLocalizedString("OK", comment: "Alert OK button title")
         alert.addAction(
             UIAlertAction(
-                title: actionTitle, style: .default,
+                title: actionTitle,
+                style: .default,
                 handler: { [weak self] _ in
                     self?.dismiss(animated: true)
-                }))
+                }
+            )
+        )
         present(alert, animated: true, completion: nil)
     }
 

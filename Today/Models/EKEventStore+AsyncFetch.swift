@@ -14,7 +14,8 @@ extension EKEventStore {
             fetchReminders(matching: predicate) { reminders in
                 if let reminders {
                     continuation.resume(returning: reminders)
-                } else {
+                }
+                else {
                     continuation.resume(throwing: TodayError.failedReadingReminders)
                 }
             }
