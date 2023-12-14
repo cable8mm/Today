@@ -27,6 +27,7 @@
 		9AD5A9D02B29CE7500C47448 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9CF2B29CE7500C47448 /* UIContentConfiguration+Stateless.swift */; };
 		9AD5A9D22B29CFFD00C47448 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9D12B29CFFD00C47448 /* TextViewContentView.swift */; };
 		9AD5A9D42B29D05500C47448 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9D32B29D05500C47448 /* DatePickerContentView.swift */; };
+		9AD5A9D62B2AC2A300C47448 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9D52B2AC2A300C47448 /* ReminderListStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9AD5A9CF2B29CE7500C47448 /* UIContentConfiguration+Stateless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
 		9AD5A9D12B29CFFD00C47448 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
 		9AD5A9D32B29D05500C47448 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
+		9AD5A9D52B2AC2A300C47448 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				9A8BC8182B2991D1009CE050 /* Reminder.swift */,
 				9AD5A9B82B299C1A00C47448 /* Date+Today.swift */,
+				9AD5A9D52B2AC2A300C47448 /* ReminderListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				9AD5A9D02B29CE7500C47448 /* UIContentConfiguration+Stateless.swift in Sources */,
 				9AD5A9C92B29CC8700C47448 /* ReminderViewController+CellConfiguration.swift in Sources */,
 				9A8BC8062B298C71009CE050 /* SceneDelegate.swift in Sources */,
+				9AD5A9D62B2AC2A300C47448 /* ReminderListStyle.swift in Sources */,
 				9AD5A9C32B29C13E00C47448 /* ReminderViewController.swift in Sources */,
 				9AD5A9CC2B29CD9700C47448 /* UIView+PinnedSubview.swift in Sources */,
 				9AD5A9D22B29CFFD00C47448 /* TextViewContentView.swift in Sources */,
