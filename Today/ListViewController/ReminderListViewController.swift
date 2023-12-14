@@ -28,7 +28,7 @@ class ReminderListViewController: UICollectionViewController {
         }
         return progress
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,10 +49,14 @@ class ReminderListViewController: UICollectionViewController {
         }
 
         let headerRegistration = UICollectionView.SupplementaryRegistration(
-            elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+            elementKind: ProgressHeaderView.elementKind,
+            handler: supplementaryRegistrationHandler
+        )
         dataSource.supplementaryViewProvider = { supplementaryView, elementKind, indexPath in
             return self.collectionView.dequeueConfiguredReusableSupplementary(
-                using: headerRegistration, for: indexPath)
+                using: headerRegistration,
+                for: indexPath
+            )
         }
 
         let addButton = UIBarButtonItem(
@@ -93,11 +97,13 @@ class ReminderListViewController: UICollectionViewController {
     }
 
     override func collectionView(
-        _ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView,
-        forElementKind elementKind: String, at indexPath: IndexPath
+        _ collectionView: UICollectionView,
+        willDisplaySupplementaryView view: UICollectionReusableView,
+        forElementKind elementKind: String,
+        at indexPath: IndexPath
     ) {
         guard elementKind == ProgressHeaderView.elementKind,
-              let progressView = view as? ProgressHeaderView
+            let progressView = view as? ProgressHeaderView
         else {
             return
         }
@@ -137,7 +143,9 @@ class ReminderListViewController: UICollectionViewController {
     }
 
     private func supplementaryRegistrationHandler(
-        progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath
+        progressView: ProgressHeaderView,
+        elementKind: String,
+        indexPath: IndexPath
     ) {
         headerView = progressView
     }
