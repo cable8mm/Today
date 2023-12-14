@@ -101,6 +101,17 @@ extension ReminderListViewController {
         reminders.remove(at: index)
     }
 
+    func deleteReminder(withId id: Reminder.ID) {
+        do {
+            try reminderStore.remove(with: id)
+            let index = reminders.indexOfReminder(withId: id)
+            reminders.remove(at: index)
+        } catch TodayError.accessDenied {
+        } catch {
+            showError(error)
+        }
+    }
+
     func prepareReminderStore() {
         Task {
             do {
