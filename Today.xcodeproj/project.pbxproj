@@ -33,6 +33,7 @@
 		9AD5A9DC2B2AD72000C47448 /* TodayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9DB2B2AD72000C47448 /* TodayError.swift */; };
 		9AD5A9DE2B2AD75900C47448 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9DD2B2AD75900C47448 /* EKEventStore+AsyncFetch.swift */; };
 		9AD5A9E02B2AD7FE00C47448 /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9DF2B2AD7FE00C47448 /* Reminder+EKReminder.swift */; };
+		9AD5A9E22B2AD85E00C47448 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD5A9E12B2AD85E00C47448 /* ReminderStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9AD5A9DB2B2AD72000C47448 /* TodayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayError.swift; sourceTree = "<group>"; };
 		9AD5A9DD2B2AD75900C47448 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
 		9AD5A9DF2B2AD7FE00C47448 /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
+		9AD5A9E12B2AD85E00C47448 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				9AD5A9DB2B2AD72000C47448 /* TodayError.swift */,
 				9AD5A9DD2B2AD75900C47448 /* EKEventStore+AsyncFetch.swift */,
 				9AD5A9DF2B2AD7FE00C47448 /* Reminder+EKReminder.swift */,
+				9AD5A9E12B2AD85E00C47448 /* ReminderStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				9AD5A9C72B29C60F00C47448 /* ReminderViewController+Section.swift in Sources */,
 				9AD5A9D02B29CE7500C47448 /* UIContentConfiguration+Stateless.swift in Sources */,
 				9AD5A9C92B29CC8700C47448 /* ReminderViewController+CellConfiguration.swift in Sources */,
+				9AD5A9E22B2AD85E00C47448 /* ReminderStore.swift in Sources */,
 				9AD5A9DC2B2AD72000C47448 /* TodayError.swift in Sources */,
 				9AD5A9E02B2AD7FE00C47448 /* Reminder+EKReminder.swift in Sources */,
 				9A8BC8062B298C71009CE050 /* SceneDelegate.swift in Sources */,
@@ -412,6 +416,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +445,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
