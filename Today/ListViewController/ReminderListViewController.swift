@@ -17,7 +17,7 @@ class ReminderListViewController: UICollectionViewController {
         }
     }
     let listStyleSegmentedControl = UISegmentedControl(items: [
-        ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name
+        ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name,
     ])
 
     override func viewDidLoad() {
@@ -50,7 +50,10 @@ class ReminderListViewController: UICollectionViewController {
 
         listStyleSegmentedControl.selectedSegmentIndex = listStyle.rawValue
         listStyleSegmentedControl.addTarget(
-            self, action: #selector(didChangeListStyle(_:)), for: .valueChanged)
+            self,
+            action: #selector(didChangeListStyle(_:)),
+            for: .valueChanged
+        )
         navigationItem.titleView = listStyleSegmentedControl
 
         if #available(iOS 16, *) {
