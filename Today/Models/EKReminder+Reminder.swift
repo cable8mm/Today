@@ -17,7 +17,10 @@ extension EKReminder {
         alarms?.forEach { alarm in
             guard let absoluteDate = alarm.absoluteDate else { return }
             let comparison = Locale.current.calendar.compare(
-                reminder.dueDate, to: absoluteDate, toGranularity: .minute)
+                reminder.dueDate,
+                to: absoluteDate,
+                toGranularity: .minute
+            )
             if comparison != .orderedSame {
                 removeAlarm(alarm)
             }

@@ -30,7 +30,8 @@ enum TodayError: LocalizedError {
             )
         case .failedReadingCalendarItem:
             return NSLocalizedString(
-                "Failed to read a calendar item.", comment: "failed reading calendar item error description"
+                "Failed to read a calendar item.",
+                comment: "failed reading calendar item error description"
             )
         case .failedReadingReminders:
             return NSLocalizedString(

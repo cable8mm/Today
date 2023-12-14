@@ -75,7 +75,8 @@ final class ReminderStore {
         let ekReminder: EKReminder
         do {
             ekReminder = try read(with: reminder.id)
-        } catch {
+        }
+        catch {
             ekReminder = EKReminder(eventStore: ekStore)
         }
         ekReminder.update(using: reminder, in: ekStore)
